@@ -1,0 +1,7 @@
+<li>
+  {{ task().title | uppercase }}
+  @if (task().dueDate) { – {{ task().dueDate | date:'dd/MM/yyyy' }} }
+  @if (task().completed) { ✅ } @else {
+    <button (click)="markDone()">Terminer</button>
+  }
+</li>
